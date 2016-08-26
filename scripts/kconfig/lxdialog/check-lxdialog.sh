@@ -2,18 +2,38 @@
 # Check ncurses compatibility
 
 # What library to link
+#ldflags()
+#{
+#	for ext in so a dylib ; do
+#		for lib in ncursesw ncurses curses ; do
+#			$cc -print-file-name=lib${lib}.${ext} | grep -q /
+#			if [ $? -eq 0 ]; then
+#				echo "-l${lib}"
+#				exit
+#			fi
+#		done
+#	done
+#	exit 1
+#}
+
 ldflags()
-{
-	for ext in so a dylib ; do
-		for lib in ncursesw ncurses curses ; do
-			$cc -print-file-name=lib${lib}.${ext} | grep -q /
-			if [ $? -eq 0 ]; then
+{  
+	for ext in so a dylib; do
+		for lib in ncursesw ncurses curses; do
+			$cc-print-file-name=lib${lib}.${ext} | grep-q /
+			if [$?-eq0];then
+				echo"-l${lib}"
+				exit
+			fi
+		done
+		for lib in ncursesw ncurses curses; do
+			if [ -f /usr/lib/lib${lib}.${ext} ];then
 				echo "-l${lib}"
 				exit
 			fi
 		done
 	done
-	exit 1
+	exit1
 }
 
 # Where is ncurses.h?
