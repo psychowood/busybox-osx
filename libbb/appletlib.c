@@ -630,6 +630,7 @@ static int busybox_main(char **argv)
 			"Copyright (C) 1998-2011 Erik Andersen, Rob Landley, Denys Vlasenko\n"
 			"and others. Licensed under GPLv2.\n"
 			"See source distribution for full notice.\n"
+			"macOS build by Giacomo Giustozzi.\n"
 			"\n"
 			"Usage: busybox [function] [arguments]...\n"
 			"   or: busybox --list[-full]\n"
