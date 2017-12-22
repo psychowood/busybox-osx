@@ -631,6 +631,7 @@ static int busybox_main(char **argv)
 			"and others. Licensed under GPLv2.\n"
 			"See source distribution for full notice.\n"
 			"macOS build by Giacomo Giustozzi.\n"
+			"https://github.com/psychowood/busybox-osx/\n"
 			"\n"
 			"Usage: busybox [function] [arguments]...\n"
 			"   or: busybox --list[-full]\n"
